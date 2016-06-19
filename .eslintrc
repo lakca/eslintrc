@@ -1,0 +1,92 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "commonjs": true
+  },
+  "rules": {
+    "constructor-super": 2,
+    "comma-dangle": [
+      2,
+      "never"
+    ],
+    "no-dupe-args": 2,
+    "no-dupe-keys": 2,
+    "no-empty": 2,
+    "no-empty-character-class": 2,
+    "no-ex-assign": 2,
+    "no-extra-parens": 2,
+    "no-extra-semi": 2,
+    "no-inner-declarations": 2,
+    "no-prototype-builtins": 2,
+    "no-unexpected-multiline": 2,
+    "no-unreachable": 2,
+    "use-isnan": 2,
+    "valid-typeof": 2,
+    "block-scoped-var": 2,
+    "dot-notation": 2,
+    "no-alert": 1,
+    "no-caller": 2,
+    "no-case-declarations": 2,
+    "eol-last": 2,
+    "func-names": 0,
+    "guard-for-in": 0,
+    "one-var": [
+      0
+    ],
+    "prefer-const": 0,
+    "key-spacing": 0,
+    "no-eq-null": 0,
+    "no-else-return": 0,
+    "no-loop-func": 1,
+    "no-param-reassign": 0,
+    "no-this-before-super": 2,
+    "no-undef": 2,
+    "no-unused-vars": [
+      2,
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "no-var": 0,
+    "no-unused-expressions": 0,
+    "no-shadow": [
+      2,
+      {
+        "allow": [
+          "xhr"
+        ]
+      }
+    ],
+    "padded-blocks": 0,
+    "space-after-keywords": 0,
+    "space-before-blocks": 0,
+    "space-before-function-paren": 0,
+    "spaced-comment": 0,
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "vars-on-top": 0,
+    "new-cap": [
+      2,
+      {
+        "capIsNewExceptions": [
+          "express.Router"
+        ]
+      }
+    ],
+    "strict": [
+      0,
+      "never"
+    ]
+  }
+}
