@@ -1,0 +1,20 @@
+{
+  "name": "@lakca/eslint-config-lakca",
+  "version": "1.0.0",
+  "description": "eslint configuration.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakca/eslintrc.git"
+  },
+  "keywords": [
+    "eslint",
+    "config"
+  ],
+  "files": [
+    "index.js",
+    ".eslintrc"
+  ],
+  "author": "lakca",
+  "license": "MIT"
+}
