@@ -1,5 +1,14 @@
 module.exports = {
+  "env": {
+    "es6": true,
+    "node": true,
+    "shared-node-browser": true
+  },
   "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2018
+  },
   "rules": {
     "array-bracket-spacing": 0,
     "block-scoped-var": 0,
@@ -32,7 +41,8 @@ module.exports = {
         "beforeColon": false
       }
     ],
-    "new-cap": 2,
+    "new-cap": 0,
+    "no-async-promise-executor": 0,
     "no-caller": 2,
     "no-case-declarations": 2,
     "no-console": 1,

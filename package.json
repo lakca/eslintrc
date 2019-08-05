@@ -16,5 +16,8 @@
     ".eslintrc"
   ],
   "author": "lakca",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-eslint": "^10.0.2"
+  }
 }
