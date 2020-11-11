@@ -13,6 +13,8 @@
   ],
   "files": [
     "index.js",
+    "fixable.js",
+    "other.js",
     ".eslintrc"
   ],
   "author": "lakca",
