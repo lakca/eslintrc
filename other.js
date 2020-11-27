@@ -1,17 +1,18 @@
+/* eslint-disable max-lines */
 module.exports = {
   'accessor-pairs': 0,
   'array-callback-return': [ 2, {
-    allowImplicit: true
+    allowImplicit: true,
   }],
   'block-scoped-var': 0,
   'callback-return': 0,
   'camelcase': [ 2, {
     ignoreDestructuring: true,
-    properties: 'never'
+    properties: 'never',
   }],
   'class-methods-use-this': 2,
   'complexity': [ 1, {
-    max: 10
+    max: 10,
   }],
   'consistent-return': 0,
   'consistent-this': [ 2, 'self' ],
@@ -27,33 +28,41 @@ module.exports = {
   'handle-callback-err': [ 2, '^(err|error|[a-zA-Z\\d]Error)$' ],
   'id-blacklist': 0,
   'id-length': 0,
-  'id-match': [ 2, '^[a-z]+([A-Z][a-z]+)*$' ],
+  'id-match': [ 2, '^_?(([a-z\\d]*([A-Z][a-z\\d]*)*)|([A-Z\\d]+(_[A-Z\\d]+)*))\\d*$', {
+    ignoreDestructuring: true,
+    onlyDeclarations: true,
+    properties: true,
+  }],
   'init-declarations': 0,
-  'line-comment-position': [ 2, {
-    position: 'above'
+  'line-comment-position': [ 1, {
+    position: 'above',
   }],
   'lines-around-directive': [ 2, 'always' ],
   'max-classes-per-file': 0,
-  'max-depth': [ 2, 4 ],
-  'max-len': [ 2, {
+  'max-depth': [ 1, 3 ],
+  'max-len': [ 1, {
+    code: 120,
+    ignoreComments: true,
     ignoreRegExpLiterals: true,
+    ignoreStrings: true,
     ignoreTemplateLiterals: true,
-    ignoreUrls: true
+    ignoreUrls: true,
+    tabWidth: 2,
   }],
-  'max-lines': [ 2, {
+  'max-lines': [ 1, {
     max: 200,
-    skipBlankLines: true
+    skipBlankLines: true,
   }],
-  'max-lines-per-function': [ 2, {
+  'max-lines-per-function': [ 1, {
     max: 30,
     skipBlankLines: true,
-    skipComments: true
+    skipComments: true,
   }],
   'max-nested-callbacks': [ 2, 2 ],
   'max-params': [ 2, 3 ],
   'max-statements': 0,
   'max-statements-per-line': [ 2, {
-    max: 2
+    max: 2,
   }],
   'multiline-ternary': [ 2, 'always-multiline' ],
   'new-cap': 2,
@@ -71,7 +80,7 @@ module.exports = {
   'no-console': 1,
   'no-const-assign': 2,
   'no-constant-condition': [ 2, {
-    checkLoops: false
+    checkLoops: false,
   }],
   'no-continue': 0,
   'no-control-regex': 2,
@@ -83,7 +92,7 @@ module.exports = {
   'no-duplicate-case': 2,
   'no-duplicate-imports': 2,
   'no-empty': [ 2, {
-    allowEmptyCatch: true
+    allowEmptyCatch: true,
   }],
   'no-empty-character-class': 2,
   'no-empty-function': 0,
@@ -93,24 +102,24 @@ module.exports = {
   'no-ex-assign': 2,
   'no-extend-native': 2,
   'no-fallthrough': [ 2, {
-    commentPattern: 'break[\\s\\w]*omitted'
+    commentPattern: 'break[\\s\\w]*omitted',
   }],
   'no-func-assign': 2,
   'no-global-assign': 2,
   'no-implicit-globals': 2,
   'no-implied-eval': 2,
-  'no-inline-comments': 2,
+  'no-inline-comments': 1,
   'no-inner-declarations': 0,
   'no-invalid-regexp': 2,
-  'no-invalid-this': 2,
+  'no-invalid-this': 1,
   'no-irregular-whitespace': 2,
   'no-iterator': 2,
   'no-label-var': 2,
   'no-labels': 0,
   'no-lone-blocks': 2,
   'no-loop-func': 2,
-  'no-magic-numbers': [ 2, {
-    ignoreArrayIndexes: true
+  'no-magic-numbers': [ 1, {
+    ignoreArrayIndexes: true,
   }],
   'no-misleading-character-class': 2,
   'no-mixed-operators': 0,
@@ -130,7 +139,7 @@ module.exports = {
   'no-octal': 2,
   'no-octal-escape': 2,
   'no-param-reassign': [ 'warn', {
-    props: true
+    props: true,
   }],
   'no-path-concat': 2,
   'no-plusplus': 0,
@@ -154,7 +163,7 @@ module.exports = {
   'no-shadow-restricted-names': 2,
   'no-sparse-arrays': 1,
   'no-sync': [ 1, {
-    allowAtRootLevel: true
+    allowAtRootLevel: true,
   }],
   'no-tabs': 2,
   'no-template-curly-in-string': 0,
@@ -170,14 +179,14 @@ module.exports = {
   'no-unsafe-finally': 2,
   'no-unused-expressions': [ 2, {
     allowShortCircuit: true,
-    allowTernary: true
+    allowTernary: true,
   }],
-  'no-unused-vars': [ 2, {
-    vars: 'local'
+  'no-unused-vars': [ 1, {
+    vars: 'all',
   }],
   'no-use-before-define': [ 2, {
     classes: false,
-    functions: false
+    functions: false,
   }],
   'no-useless-call': 2,
   'no-useless-catch': 2,
@@ -186,10 +195,10 @@ module.exports = {
   'no-useless-escape': 2,
   'no-void': 0,
   'no-warning-comments': [ 1, {
-    terms: [ 'fixme', 'fix', 'fixit', 'bug', 'todo', 'xxx' ]
+    terms: [ 'fixme', 'fix', 'fixit', 'bug', 'todo', 'xxx' ],
   }],
   'no-with': 2,
-  'prefer-named-capture-group': 2,
+  'prefer-named-capture-group': 1,
   'prefer-promise-reject-errors': 2,
   'prefer-rest-params': 2,
   'prefer-spread': 2,
@@ -208,15 +217,15 @@ module.exports = {
   'vue/max-attributes-per-line': [ 2, {
     multiline: {
       allowFirstLine: true,
-      max: 1
+      max: 1,
     },
-    singleline: 1
+    singleline: 1,
   }],
   'vue/no-unused-vars': 1,
   'vue/require-default-prop': 0,
   'vue/singleline-html-element-content-newline': [ 2, {
     ignoreWhenEmpty: true,
-    ignoreWhenNoAttributes: true
+    ignoreWhenNoAttributes: true,
   }],
-  'vue/use-v-on-exact': 0
+  'vue/use-v-on-exact': 0,
 }
